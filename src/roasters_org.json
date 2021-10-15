@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "state": "PA",
+            "roasters": [
+                "Alabaster Coffee (Williamsport)",
+                "Maquina Coffee Roasters (Coatesville)"
+            ]
+        },
+        {
+            "state": "OR",
+            "roasters": [
+                "Bespoken Coffee Roasters (Corvallis)",
+                "Dapper & Wise (Portland)",
+                "Push X Pull (Portland)",
+                "Roseline Coffee (Portland)",
+                "Water Ave Coffee (Portland)"
+            ]
+        }
+    ]
+}

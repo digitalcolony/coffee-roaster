@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import USAMap from "react-usa-map";
 import "./App.css";
+//import roasters from "./roasters.json";
 
 // https://docs.google.com/spreadsheets/d/e/2PACX-1vQR37ZQny3aE5FtYXhqE8UwR4YGK6Z9A2iKeLEaCP8N_xvmlV5IO_W2s2rQWHXfHcUw6CBV-Q3O6OW0/pubhtml
 const states = [
@@ -38,26 +39,39 @@ const states = [
 	"CA",
 	"OR",
 	"WI",
+	"OH",
 ];
 
 function buildStatesConfig() {
 	const config = {};
 	states.forEach((state) => {
-		config[state] = { fill: "brown" };
+		config[state] = { fill: "#674736" };
 	});
 	return config;
 }
+
+// function buildRoastersConfig() {
+// 	const config = {};
+// 	roasters.forEach((roaster) => {
+// 		config[roaster.state] = { fill: "#674736" };
+// 	});
+
+// 	return config;
+// }
+
 class App extends Component {
 	/* mandatory */
 	mapHandler = (event) => {
-		alert(event.target.dataset.name);
+		//alert(event.target.dataset.name);
 	};
 
 	statesCustomConfig = buildStatesConfig();
+	//roasterCustomConfig = buildRoastersConfig();
 
 	render() {
 		return (
 			<div className="App">
+				<p>{this.state}</p>
 				<USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
 			</div>
 		);
@@ -65,26 +79,3 @@ class App extends Component {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

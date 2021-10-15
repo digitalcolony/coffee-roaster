@@ -1,0 +1,27 @@
+[
+        {
+            "name": "Alabaster Coffee",
+            "city": "Williamsport",
+            "state": "PA"
+        },
+        {
+            "name": "Maquina Coffee Roasters",
+            "city": "Coatesville",
+            "state": "PA"
+        },
+        {
+            "name": "Bespoken Coffee Roasters",
+            "city": "Corvallis",
+            "state": "OR"
+        },
+        {
+            "name": "Dapper & Wise",
+            "city": "Portland",
+            "state": "OR"
+        },
+        {
+            "name": "Push X Pull",
+            "city": "Portland",
+            "state": "OR"
+        }
+    ]
