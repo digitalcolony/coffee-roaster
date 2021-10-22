@@ -40,6 +40,7 @@ const states = [
 	"OR",
 	"WI",
 	"OH",
+	"TX",
 ];
 
 function buildStatesConfig() {
