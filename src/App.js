@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import USAMap from "react-usa-map";
 import "./App.css";
-import { states } from "./States";
+import states from "./States";
 //import roasters from "./roasters.json";
 
 function buildStatesConfig() {
