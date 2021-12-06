@@ -39,7 +39,8 @@ const states = [
 	"MA",
 	"VT",
 	"MN",
-	"NC"
+	"NC",
+	"NE"
 ];
 
 // Add states manually for now. Later pull in data from
