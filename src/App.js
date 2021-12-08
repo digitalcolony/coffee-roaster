@@ -28,6 +28,7 @@ class App extends Component {
 	};
 
 	statesCustomConfig = buildStatesConfig();
+
 	//roasterCustomConfig = buildRoastersConfig();
 
 	render() {
@@ -35,6 +36,13 @@ class App extends Component {
 			<div className="App">
 				<p>{this.state}</p>
 				<USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
+				<div style={{ textAlign: "center" }}>
+					<p>My mission is to order great coffee online from every state (and DC). 😎</p>
+					<a href="https://docs.google.com/spreadsheets/d/1h-oqlqJ_G3UXuDSkdFHuEaCVuOXQOb68y2sduXQRTn4/edit?usp=sharing">
+						Coffee Roaster Spreadsheet
+					</a>
+					<p>Current progress: {Object.keys(this.statesCustomConfig).length}/51</p>
+				</div>
 			</div>
 		);
 	}

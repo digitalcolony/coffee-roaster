@@ -1,4 +1,4 @@
-const states = [
+const states = new Set([
 	"PA",
 	"OR",
 	"CA",
@@ -40,8 +40,8 @@ const states = [
 	"VT",
 	"MN",
 	"NC",
-	"NE"
-];
+	"NE",
+]);
 
 // Add states manually for now. Later pull in data from
 // Google Spreadsheet
