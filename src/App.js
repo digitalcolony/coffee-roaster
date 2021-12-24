@@ -3,7 +3,6 @@ import USAMap from "react-usa-map";
 import "./App.css";
 import "./circle.css";
 import states from "./States";
-//import roasters from "./roasters.json";
 
 function buildStatesConfig() {
 	const config = {};
@@ -19,15 +18,6 @@ function getStateCount() {
 	return numStates;
 }
 
-// function buildRoastersConfig() {
-// 	const config = {};
-// 	roasters.forEach((roaster) => {
-// 		config[roaster.state] = { fill: "#674736" };
-// 	});
-
-// 	return config;
-// }
-
 class App extends Component {
 	/* mandatory */
 	mapHandler = (event) => {
@@ -37,8 +27,6 @@ class App extends Component {
 	statesCustomConfig = buildStatesConfig();
 	stateCount = getStateCount();
 	progressPercent = (this.stateCount / 51) * 100;
-
-	//roasterCustomConfig = buildRoastersConfig();
 
 	render() {
 		return (
