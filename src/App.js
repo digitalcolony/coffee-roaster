@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import USAMap from "react-usa-map";
 import "./App.css";
-import "./circle.css";
-import states from "./States";
+import states from "./data/States";
+import Progress from "./components/Progress";
 
 function buildStatesConfig() {
 	const config = {};
@@ -34,23 +34,20 @@ class App extends Component {
 				<USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
 				<div style={{ textAlign: "center" }}>
 					<p>My mission is to order great coffee online from every state (and DC). 😎</p>
-					<a href="https://docs.google.com/spreadsheets/d/1h-oqlqJ_G3UXuDSkdFHuEaCVuOXQOb68y2sduXQRTn4/edit?usp=sharing">
-						Coffee Roaster Spreadsheet
-					</a>{" "}
-					: Current progress: {this.stateCount}/51
-					<p></p>
-					<div className="progress">
-						<div className={`c100 p${22 + 33} orange`}>
-							<span>
-								{Math.round((this.stateCount / 51) * 100)}%
-								<br />
-							</span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
-					</div>
+					<p>
+						<a href="https://docs.google.com/spreadsheets/d/1h-oqlqJ_G3UXuDSkdFHuEaCVuOXQOb68y2sduXQRTn4/edit?usp=sharing">
+							Coffee Roaster Spreadsheet
+						</a>
+					</p>
+
+					<Progress count={this.stateCount} total={51} />
+					<p>
+						☕{" "}
+						<em>
+							Created by <a href="https://michaelallensmith.com">Michael Allen Smith</a>. (
+							<a href="https://github.com/digitalcolony/coffee-roaster">GitHub</a>)
+						</em>
+					</p>
 				</div>
 			</div>
 		);
