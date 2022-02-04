@@ -45,7 +45,8 @@ const states = new Set([
 	"GA",
 	"VA",
 	"AZ",
-	"UT"
+	"UT",
+	"TN"
 ]);
 
 // Add states manually for now. Later pull in data from
