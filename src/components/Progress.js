@@ -1,12 +1,12 @@
 import "./Progress.css";
 
-export default function Progress(props) {
+export default function Progress({ count, total }) {
 	return (
 		<>
 			<div className="progress">
 				<div className={`c100 p${22 + 33} orange`}>
 					<span>
-						{Math.round((props.count / props.total) * 100)}%
+						{Math.round((count / total) * 100)}%
 						<br />
 					</span>
 					<div className="slice">
@@ -16,7 +16,7 @@ export default function Progress(props) {
 				</div>
 			</div>
 			<mark>
-				Current progress: {props.count}/{props.total}
+				Current progress: {count}/{total}
 			</mark>
 		</>
 	);
