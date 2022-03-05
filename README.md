@@ -1,6 +1,6 @@
 # Coffee Roaster Map
 
-The webpage was built using React and the react-usa-map mpm package.
+The webpage was built using React and the react-usa-map npm package.
 
 The states array is updated every time I order coffee from a new state. Each state in the array is filled in on the map. The goal is order coffee from every state and DC.
 
