@@ -19,7 +19,9 @@ function getStateCount() {
 }
 
 class App extends Component {
-	/* mandatory */
+	_isMounted = false;
+
+	// mandatory for the map to work
 	mapHandler = (event) => {
 		//alert(event.target.dataset.name);
 	};
@@ -28,10 +30,42 @@ class App extends Component {
 	stateCount = getStateCount();
 	progressPercent = (this.stateCount / 51) * 100;
 
+	constructor() {
+		super();
+		this.state = { width: window.innerWidth, height: window.innerHeight };
+	}
+
+	// Resize the map when the window is resized
+	updateDimensions() {
+		if (window.innerWidth < 500) {
+			let update_width = window.innerWidth - 10;
+			let update_height = Math.round(update_width / 2);
+			this.setState({ width: update_width, height: update_height });
+		} else {
+			let update_width = window.innerWidth - 100;
+			let update_height = Math.round(update_width / 2.7);
+			this.setState({ width: update_width, height: update_height });
+		}
+	}
+
+	// Add Event listener
+	componentDidMount() {
+		this._isMounted = true;
+		this.updateDimensions();
+		window.addEventListener("resize", this.updateDimensions.bind(this));
+	}
+
+	// Remove Event Listener
+	componentWillUnmount() {
+		this._isMounted = false;
+		window.removeEventListener("resize", this.updateDimensions.bind(this));
+	}
+
 	render() {
 		return (
 			<div className="App">
-				<USAMap customize={this.statesCustomConfig} onClick={this.mapHandler} />
+				<h1>Coffee Roaster Map</h1>
+
 				<div style={{ textAlign: "center" }}>
 					<p>My mission is to order great coffee online from every state (and DC). 😎</p>
 					<p>
@@ -41,6 +75,14 @@ class App extends Component {
 					</p>
 
 					<Progress count={this.stateCount} total={51} />
+
+					<USAMap
+						style={{ textAlign: "center" }}
+						width={this.state.width}
+						height={this.state.height}
+						customize={this.statesCustomConfig}
+						onClick={this.mapHandler}
+					/>
 					<p>
 						☕{" "}
 						<em>
