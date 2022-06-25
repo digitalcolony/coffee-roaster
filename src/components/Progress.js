@@ -1,3 +1,4 @@
+import React from "react";
 import "./Progress.css";
 
 export default function Progress({ count, total }) {
