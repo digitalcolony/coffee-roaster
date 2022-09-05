@@ -2,12 +2,14 @@ import React from "react";
 import "./Progress.css";
 
 export default function Progress({ count, total }) {
+	const percent = Math.round((count / total) * 100);
+
 	return (
 		<>
 			<div className="progress">
-				<div className={`c100 p${22 + 33} orange`}>
+				<div className={`c100 p${percent} orange`}>
 					<span>
-						{Math.round((count / total) * 100)}%
+						{percent}%
 						<br />
 					</span>
 					<div className="slice">
