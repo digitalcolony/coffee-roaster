@@ -61,7 +61,8 @@ const states = new Set([
 	"AL",
 	"KY",
 	"AR",
-	"NM"
+	"NM",
+	"OK",
 ]);
 
 // Add states manually for now. Later pull in data from
