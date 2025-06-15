@@ -107,14 +107,18 @@ coffee-roaster/
 ## 🚀 Deployment
 
 ### Netlify Configuration
+
 The project includes a `netlify.toml` file that configures:
+
 - **Build Command**: `npm run build`
 - **Publish Directory**: `build`
 - **Node.js Version**: 18.20.5 (for compatibility)
 - **Redirects**: SPA routing support
 
 ### Manual Deployment
+
 1. Build the project locally:
+
 ```bash
 npm run build
 ```
