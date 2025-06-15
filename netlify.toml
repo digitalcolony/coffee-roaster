@@ -1,6 +1,6 @@
 [build]
   publish = "build"
-  command = "npm run build"
+  command = "NODE_OPTIONS=--openssl-legacy-provider react-scripts build"
 
 [build.environment]
   NODE_VERSION = "18.20.5"
